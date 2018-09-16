@@ -40,12 +40,14 @@ elif [ "$rom" == "lineage" ];then
 	repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
 elif [ "$rom" == "rr" ];then
 	repo init -u https://github.com/ResurrectionRemix/platform_manifest.git -b oreo
+elif [ "$rom" == "dotos" ];then
+	repo init -u https://github.com/DotOS/manifest.git -b dot-o
 fi
 
 if [ -d .repo/local_manifests ] ;then
 	( cd .repo/local_manifests; git fetch; git reset --hard; git checkout origin/$localManifestBranch)
 else
-	git clone https://github.com/phhusson/treble_manifest .repo/local_manifests -b $localManifestBranch
+	git clone https://github.com/chautruongthinhtreble_manifest .repo/local_manifests -b $localManifestBranch
 fi
 
 if [ -z "$local_patches" ];then

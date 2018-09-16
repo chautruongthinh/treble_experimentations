@@ -48,6 +48,7 @@ ROM types:
   aex
   slim
   havoc
+  dotos
 
 Variants are dash-joined combinations of (in order):
 * processor type
@@ -183,6 +184,13 @@ function get_rom_type() {
                 treble_generate="havoc"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
+	    dotos)
+                mainrepo="https://github.com/DotOS/manifest.git"
+                mainbranch="dot-o"
+                localManifestBranch="android-8.1"
+                treble_generate="dotos"
+                extra_make_options="WITHOUT_CHECK_API=true"
+                ;;
         esac
         shift
     done
@@ -272,7 +280,7 @@ function clone_or_checkout() {
             git checkout origin/"$localManifestBranch"
         )
     else
-        git clone https://github.com/phhusson/"$repo" "$dir" -b "$localManifestBranch"
+        git clone https://github.com/chautruongthinh/"$repo" "$dir" -b "$localManifestBranch"
     fi
 }
 
