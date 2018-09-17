@@ -40,7 +40,7 @@ elif [ "$rom" == "lineage" ];then
 	repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
 elif [ "$rom" == "rr" ];then
 	repo init -u https://github.com/ResurrectionRemix/platform_manifest.git -b oreo
-elif [ "$rom" == "dotos" ];then
+elif [ "$rom" == "dot" ];then
 	repo init -u https://github.com/DotOS/manifest.git -b dot-o
 fi
 

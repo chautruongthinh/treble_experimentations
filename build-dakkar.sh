@@ -48,7 +48,7 @@ ROM types:
   aex
   slim
   havoc
-  dotos
+  dot
 
 Variants are dash-joined combinations of (in order):
 * processor type
@@ -184,7 +184,7 @@ function get_rom_type() {
                 treble_generate="havoc"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
-	    dotos)
+	    dot)
                 mainrepo="https://github.com/DotOS/manifest.git"
                 mainbranch="dot-o"
                 localManifestBranch="android-8.1"
